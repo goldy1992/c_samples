@@ -5,6 +5,8 @@ set(EXECUTABLE_NAME "memory_arena")
 
 set(SOURCES)
 list( APPEND SOURCES
+ memory_arena.h
+ memory_arena.c
  main.c 
 )
 
