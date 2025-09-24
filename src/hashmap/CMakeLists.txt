@@ -5,7 +5,9 @@ set(EXECUTABLE_NAME "hashmap")
 
 set(SOURCES)
 list( APPEND SOURCES
- main.c 
+    hashmap.h
+    hashmap.c
+    main.c 
 )
 
 add_executable(${EXECUTABLE_NAME} ${SOURCES})
