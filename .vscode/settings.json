@@ -5,7 +5,8 @@
         "stdint.h": "c",
         "stdio.h": "c",
         "hello.h": "c",
-        "hashmap.h": "c"
+        "hashmap.h": "c",
+        "memory_arena.h": "c"
     },
     "editor.suggest.insertMode": "insert",
     "[cpp]": {
