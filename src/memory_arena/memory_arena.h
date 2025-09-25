@@ -2,7 +2,7 @@
 
 struct Arena
 {
-    char* buffer;
+    void* buffer;
     size_t capacity;
     size_t offset;
 };
