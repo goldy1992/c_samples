@@ -38,6 +38,17 @@
             "console": "internalConsole"
         },
         {
+            "name": "Macros (Windows)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/Debug/macros.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/bin/Debug",
+            "environment": [],
+            "console": "internalConsole"
+        },
+        {
             "name": "Test",
             "type": "cppvsdbg",
             "request": "launch",
