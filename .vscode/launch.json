@@ -49,6 +49,17 @@
             "console": "internalConsole"
         },
         {
+            "name": "Text (Windows)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/Debug/text.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/bin/Debug",
+            "environment": [],
+            "console": "internalConsole"
+        },
+        {
             "name": "Test",
             "type": "cppvsdbg",
             "request": "launch",
