@@ -7,11 +7,11 @@ typedef void (*PlatformThreadFunction)(void *);
 #define CREATE_THREAD_AND_EXECUTE 0
 
 
-
 typedef struct {
     unsigned int startSuspended;
 } PlatformThreadAttributes;
 
+// in the thread data we need to also specify a reference to the function so that the trampoline method can call the thread function.
 typedef struct {
     PlatformThreadFunction threadFunction;
     void *arguments;
@@ -23,6 +23,7 @@ typedef struct
     PlatformThreadData data;
 } PlatformThread;
 
+// API to be extended for more complex threading operations
 typedef struct
 {
     PlatformThread (*createPlatformThread)(PlatformThreadData threadData, PlatformThreadAttributes threadAttributes);

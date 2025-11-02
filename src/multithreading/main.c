@@ -22,24 +22,33 @@ void MyThreadFunction(void* params) {
     return;
 }
 
+// for simplicity all memory is allocated on the stack!
 int main()
 {
+    // Link to the Win32 API functions
     PlatformThreadAPI threadAPI;
     threadAPI.createPlatformThread = &win32CreatePlatformThread;
     threadAPI.joinPlatformThread= &win32JoinPlatformThread;
     threadAPI.closePlatformThreadHandle= &win32ClosePlatformThreadHandle;
     threadAPI.sleep = &win32Sleep;
+
+    // Create the thread runtime parameters
     const char* message = "Hello from thread!";
     MyThreadParams params;
     params.threadAPI = threadAPI;
     params.message = message;
+    
+    // Define the thread data including a pointer to the function
     PlatformThreadData threadData; // Make the thread on the stack to avoid memory management
     threadData.threadFunction = &MyThreadFunction;
     threadData.arguments = &params;
+
+    // Create the platform thread and execute it
     PlatformThread thread = threadAPI.createPlatformThread(threadData, (PlatformThreadAttributes){CREATE_THREAD_AND_EXECUTE});
-      // Wait for the new thread to finish
+      
+    // Block the main method to wait for the new thread to finish
     threadAPI.joinPlatformThread(thread);
-    // Close the thread handle
+    // Once finished, close the thread handle
     threadAPI.closePlatformThreadHandle(thread);
     return 0;
 }
