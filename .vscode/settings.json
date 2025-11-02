@@ -6,7 +6,10 @@
         "stdio.h": "c",
         "hello.h": "c",
         "hashmap.h": "c",
-        "memory_arena.h": "c"
+        "memory_arena.h": "c",
+        "windows_impl.h": "c",
+        "windows.h": "c",
+        "platform_thread.h": "c"
     },
     "editor.suggest.insertMode": "insert",
     "[cpp]": {

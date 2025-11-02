@@ -5,6 +5,11 @@ set(EXECUTABLE_NAME "multithreading")
 
 set(SOURCES)
 list( APPEND SOURCES
+    # headers
+    platform_thread.h
+    windows_impl.h
+    # source files
+    windows_impl.c
     main.c 
 )
 
