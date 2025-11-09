@@ -13,6 +13,7 @@ typedef struct Entry Entry;
 struct HashMap
 {
     Entry *entries;
+    int (*compareKeys)(const void *key1, const void *key2);
     size_t capacity;
     size_t size;
 };

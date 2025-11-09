@@ -1,0 +1,105 @@
+cmake_minimum_required(VERSION 3.22.1...3.31.7 )
+
+add_subdirectory(${FLECS_DIR} ${BUILD_DIR})
+
+set(ENGINE "ENGINE")
+set(SOURCES)
+set(HEADERS)
+list(APPEND HEADERS
+    # api 
+    include/api/components.h
+    include/api/defines.h
+    include/api/functions.h
+    include/api/input.h
+    include/api/specs.h
+    include/api/types.h
+    # camera
+    camera/camera.h
+    # ecs
+    ecs/ecs.h
+    ecs/ecs_common.h
+    ecs/ecs_systems.h
+    engine_main.h
+    # components
+    components/animator/animator.h
+    components/animator/lerp.h
+    # text
+    text/text.h
+    # renderer
+    renderer/render_assets.h
+    renderer/render_context.h
+    renderer/render_manager.h
+    renderer/render_queue.h
+    renderer/render_scene.h
+    renderer/render_text.h
+    renderer/shader_loader.h
+    renderer/texture_loader.h
+    # utils
+    util/path_functions.h
+)
+
+list(APPEND SOURCES 
+    # camera
+    camera/camera.cpp
+
+    engine_main.cpp
+    engine_api_impl.cpp
+    input/click.cpp
+    # text
+    text/text.cpp
+    #renderer
+    renderer/render_assets.cpp
+    renderer/render_context.cpp
+    renderer/render_manager.cpp
+    renderer/render_queue.cpp
+    renderer/render_scene.cpp
+    renderer/render_text.cpp
+    renderer/render_main.cpp
+    renderer/shader_loader.cpp
+    # util
+    util/render_task_util.cpp
+    # util/uniform_util.cpp
+    # io
+    io/asset_manager.cpp
+    # ecs
+    ecs/ecs_systems.cpp
+    ecs/ecs.cpp
+    # game/ app
+    app/app.cpp
+    # components
+    components/animator/animator.cpp
+    components/animator/easing_equations.cpp
+    components/animator/lerp.cpp
+    # utils
+    util/path_functions.cpp
+    # api
+    api/transform.cpp
+)
+
+add_library(${ENGINE} STATIC 
+   ${HEADERS}
+   ${SOURCES}
+)
+
+add_custom_command(TARGET ${ENGINE}  POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    "${CMAKE_SOURCE_DIR}/engine_assets"
+    "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/engine_assets"
+)
+
+if (MSVC)
+    set_property(TARGET ${ENGINE} PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
+    target_compile_options(${ENGINE} PUBLIC "-DDEV=${DEV_MODE};/WX;/W4;/wd4100;/wd4189;/wd4201;/wd4456;/wd4127;/wd4244;")
+endif()
+
+target_include_directories(${ENGINE} PUBLIC 
+    ${CMAKE_CURRENT_SOURCE_DIR}  
+    ${CMAKE_CURRENT_SOURCE_DIR}/vendor/glad 
+    ${ENGINE_INCLUDE_DIR}
+    ${FLECS_DIR}
+)
+
+target_link_libraries(${ENGINE} PUBLIC
+    flecs::flecs_static
+    glm::glm
+)

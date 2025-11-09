@@ -4,6 +4,17 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+ {
+            "name": "App (Windows)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/Debug/app.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/bin/Debug",
+            "environment": [],
+            "console": "internalConsole"
+        },
         {
             "name": "Hashmap (Windows)",
             "type": "cppvsdbg",
@@ -49,6 +60,16 @@
             "console": "internalConsole"
         },
         {
+            "name": "Linked List (Windows)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/Debug/linked_list.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/bin/Debug",
+            "environment": [],
+            "console": "internalConsole"
+        }, {
             "name": "Text (Windows)",
             "type": "cppvsdbg",
             "request": "launch",
@@ -70,16 +91,6 @@
             "environment": [],
             "console": "internalConsole"
         },
-        {
-            "name": "Vulkan (Windows) Launch",
-            "type": "cppvsdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/bin/Debug/vulkan_hello.exe",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}/bin/Debug",
-            "environment": [],
-            "console": "internalConsole"
-        }
+       
     ]
 }

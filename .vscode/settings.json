@@ -9,7 +9,9 @@
         "memory_arena.h": "c",
         "windows_impl.h": "c",
         "windows.h": "c",
-        "platform_thread.h": "c"
+        "platform_thread.h": "c",
+        "linked_list.h": "c",
+        "assert.h": "c"
     },
     "editor.suggest.insertMode": "insert",
     "[cpp]": {

@@ -1,20 +1,20 @@
 cmake_minimum_required(VERSION 3.22.1...3.31.7 )
 
 
-set(EXECUTABLE_NAME "hashmap")
+set(LIBRARY_NAME "hashmap")
 
 set(SOURCES)
 list( APPEND SOURCES
     hashmap.h
     hashmap.c
-    main.c 
+    # main.c 
 )
 
-add_executable(${EXECUTABLE_NAME} ${SOURCES})
+add_library(${LIBRARY_NAME} ${SOURCES})
 
 
 
-target_include_directories( ${EXECUTABLE_NAME} PUBLIC 
+target_include_directories( ${LIBRARY_NAME} PUBLIC 
     ${CMAKE_CURRENT_LIST_DIR}  
 )
 
