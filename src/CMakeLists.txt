@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.22.1...3.31.7 )
 set(CMAKE_SOURCE_ROOT "${CMAKE_SOURCE_DIR}")
 
 add_subdirectory("app")
+add_subdirectory("queue")
 add_subdirectory("hashmap")
 add_subdirectory("macros")
 add_subdirectory("memory_arena")
