@@ -14,7 +14,7 @@ void test_queue()
     int i;
     for (i = 1; i <= 5; i++)
     {
-        pushQueue(&i, sizeof(int), &queue);
+        pushQueueCopy(&i, sizeof(int), &queue);
     }
     for (i = 1; i <= 5; i++)
     {

@@ -11,5 +11,6 @@ typedef struct {
 } Queue;
 
 Queue createQueue(size_t itemSize, size_t capacity);
-void pushQueue(void* item, size_t itemSize, Queue* queue);
+void pushQueueCopy(void* item, size_t itemSize, Queue* queue);
+void* pushQueueGetRef(Queue* queue);
 void* popQueue(Queue* queue);

@@ -16,7 +16,12 @@ Queue createQueue(size_t itemSize, size_t capacity)
 	return queue;
 }
 
-void pushQueue(void* item, size_t itemSize, Queue* queue) {
+void pushQueueCopy(void* item, size_t itemSize, Queue* queue) {
+	void* copyAddr = pushQueueGetRef(queue);
+	memcpy(copyAddr, item, sizeof(itemSize));
+}
+
+void* pushQueueGetRef(Queue* queue) {
 	assert(queue->size < queue->capacity);
 	size_t insertIdx = 0;
 	if (queue->headIdx == -1) {
@@ -26,9 +31,7 @@ void pushQueue(void* item, size_t itemSize, Queue* queue) {
 	else {
 		insertIdx = (queue->size++ + queue->headIdx) % queue->capacity;
 	}	
-	void * copyAddr = queue->data + (insertIdx* queue->itemSize);
-	memcpy(copyAddr, item, sizeof(itemSize));
-
+	return queue->data + (insertIdx* queue->itemSize);
 }
 
 void* popQueue(Queue* queue) {
