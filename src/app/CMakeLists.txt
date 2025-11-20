@@ -18,12 +18,14 @@ target_include_directories( ${EXECUTABLE_NAME} PUBLIC
     ${CMAKE_SOURCE_ROOT}/linked_list
     ${CMAKE_SOURCE_ROOT}/memory_arena
     ${CMAKE_SOURCE_ROOT}/hashmap
+    ${CMAKE_SOURCE_ROOT}/queue
 )
 
 target_link_libraries(${EXECUTABLE_NAME}
     linked_list
     memory_arena
     hashmap
+	queue
 )
 
 

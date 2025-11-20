@@ -18,7 +18,8 @@ void init_hashmap(HashMap *hashMap)
 uint64_t hash_key(const void *key)
 {
     uint64_t hash = FNV_OFFSET;
-    for (const char *p = key; *p; p++)
+    const char *p = key;
+    for (p; *p; p++)
     {
         hash ^= (uint64_t)(unsigned char)(*p);
         hash *= FNV_PRIME;

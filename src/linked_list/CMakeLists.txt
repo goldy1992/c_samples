@@ -18,7 +18,8 @@ target_include_directories( ${LIBRARY_NAME} PUBLIC
     ${CMAKE_CURRENT_LIST_DIR}  
 )
 target_link_libraries( ${LIBRARY_NAME} 
-   memory_arena 
+	common
+   	memory_arena 
 )
 
 

@@ -34,7 +34,8 @@ void* linked_list_get(LinkedList *list, size_t index) {
     }
     else {
         ListEntry* current = list->head;
-        for (int i = 0; i < index; i++) {
+        int i;
+        for (i = 0; i < index; i++) {
             current = current->next;
         }
         return current->data;
@@ -61,7 +62,8 @@ ListEntry* lined_list_replace_at(LinkedList *list, ListEntry* data, size_t index
     }
     else {
         ListEntry* current = list->head;
-        for (int i = 0; i < index - 1; i++) {
+        int i;
+        for (i = 0; i < index - 1; i++) {
             current = current->next;
         }
         data->next = current->next;

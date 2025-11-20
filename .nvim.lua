@@ -1,0 +1,4 @@
+-- file to map project specific neovim commands!
+--
+-- vim.keymap.set("n", "<F5>", ":!cd .\\bin\\Debug; $PWD.Path; .\\app.exe %<CR>", { desc = "run command" })
+-- vim.keymap.set("n", "<F7>", ":!.\\build.ps1 %<CR>", { desc = "build command" })

@@ -1,6 +1,6 @@
 #pragma once
+#include <stddef.h>
 
-#define NULL ((void*)0)
 
 
 typedef struct ListEntry ListEntry;

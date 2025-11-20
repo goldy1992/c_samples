@@ -1,0 +1,56 @@
+[
+{
+  "directory": "C:/dev/workspace/c_samples/out",
+  "command": "\"C:\\dev\\apps\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx86\\x86\\cl.exe\"  /nologo -IC:\\dev\\workspace\\c_samples\\src\\app -IC:\\dev\\workspace\\c_samples\\linked_list -IC:\\dev\\workspace\\c_samples\\memory_arena -IC:\\dev\\workspace\\c_samples\\hashmap -IC:\\dev\\workspace\\c_samples\\queue -IC:\\dev\\workspace\\c_samples\\src\\linked_list -IC:\\dev\\workspace\\c_samples\\src\\common\\common.h -IC:\\dev\\workspace\\c_samples\\src\\memory_arena -IC:\\dev\\workspace\\c_samples\\src\\hashmap -IC:\\dev\\workspace\\c_samples\\src\\queue /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /Fosrc\\app\\CMakeFiles\\app.dir\\main.c.obj /Fdsrc\\app\\CMakeFiles\\app.dir\\ /FS -c C:\\dev\\workspace\\c_samples\\src\\app\\main.c",
+  "file": "C:\\dev\\workspace\\c_samples\\src\\app\\main.c",
+  "output": "src\\app\\CMakeFiles\\app.dir\\main.c.obj"
+},
+{
+  "directory": "C:/dev/workspace/c_samples/out",
+  "command": "\"C:\\dev\\apps\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx86\\x86\\cl.exe\"  /nologo -IC:\\dev\\workspace\\c_samples\\src\\queue -IC:\\dev\\workspace\\c_samples\\src\\memory_arena /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /Fosrc\\queue\\CMakeFiles\\queue.dir\\queue.c.obj /Fdsrc\\queue\\CMakeFiles\\queue.dir\\queue.pdb /FS -c C:\\dev\\workspace\\c_samples\\src\\queue\\queue.c",
+  "file": "C:\\dev\\workspace\\c_samples\\src\\queue\\queue.c",
+  "output": "src\\queue\\CMakeFiles\\queue.dir\\queue.c.obj"
+},
+{
+  "directory": "C:/dev/workspace/c_samples/out",
+  "command": "\"C:\\dev\\apps\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx86\\x86\\cl.exe\"  /nologo -IC:\\dev\\workspace\\c_samples\\src\\hashmap /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /Fosrc\\hashmap\\CMakeFiles\\hashmap.dir\\hashmap.c.obj /Fdsrc\\hashmap\\CMakeFiles\\hashmap.dir\\hashmap.pdb /FS -c C:\\dev\\workspace\\c_samples\\src\\hashmap\\hashmap.c",
+  "file": "C:\\dev\\workspace\\c_samples\\src\\hashmap\\hashmap.c",
+  "output": "src\\hashmap\\CMakeFiles\\hashmap.dir\\hashmap.c.obj"
+},
+{
+  "directory": "C:/dev/workspace/c_samples/out",
+  "command": "\"C:\\dev\\apps\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx86\\x86\\cl.exe\"  /nologo -IC:\\dev\\workspace\\c_samples\\src\\macros /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /Fosrc\\macros\\CMakeFiles\\macros.dir\\main.c.obj /Fdsrc\\macros\\CMakeFiles\\macros.dir\\ /FS -c C:\\dev\\workspace\\c_samples\\src\\macros\\main.c",
+  "file": "C:\\dev\\workspace\\c_samples\\src\\macros\\main.c",
+  "output": "src\\macros\\CMakeFiles\\macros.dir\\main.c.obj"
+},
+{
+  "directory": "C:/dev/workspace/c_samples/out",
+  "command": "\"C:\\dev\\apps\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx86\\x86\\cl.exe\"  /nologo -IC:\\dev\\workspace\\c_samples\\src\\memory_arena /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /Fosrc\\memory_arena\\CMakeFiles\\memory_arena.dir\\memory_arena.c.obj /Fdsrc\\memory_arena\\CMakeFiles\\memory_arena.dir\\memory_arena.pdb /FS -c C:\\dev\\workspace\\c_samples\\src\\memory_arena\\memory_arena.c",
+  "file": "C:\\dev\\workspace\\c_samples\\src\\memory_arena\\memory_arena.c",
+  "output": "src\\memory_arena\\CMakeFiles\\memory_arena.dir\\memory_arena.c.obj"
+},
+{
+  "directory": "C:/dev/workspace/c_samples/out",
+  "command": "\"C:\\dev\\apps\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx86\\x86\\cl.exe\"  /nologo -IC:\\dev\\workspace\\c_samples\\src\\multithreading /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /Fosrc\\multithreading\\CMakeFiles\\multithreading.dir\\windows_impl.c.obj /Fdsrc\\multithreading\\CMakeFiles\\multithreading.dir\\ /FS -c C:\\dev\\workspace\\c_samples\\src\\multithreading\\windows_impl.c",
+  "file": "C:\\dev\\workspace\\c_samples\\src\\multithreading\\windows_impl.c",
+  "output": "src\\multithreading\\CMakeFiles\\multithreading.dir\\windows_impl.c.obj"
+},
+{
+  "directory": "C:/dev/workspace/c_samples/out",
+  "command": "\"C:\\dev\\apps\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx86\\x86\\cl.exe\"  /nologo -IC:\\dev\\workspace\\c_samples\\src\\multithreading /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /Fosrc\\multithreading\\CMakeFiles\\multithreading.dir\\main.c.obj /Fdsrc\\multithreading\\CMakeFiles\\multithreading.dir\\ /FS -c C:\\dev\\workspace\\c_samples\\src\\multithreading\\main.c",
+  "file": "C:\\dev\\workspace\\c_samples\\src\\multithreading\\main.c",
+  "output": "src\\multithreading\\CMakeFiles\\multithreading.dir\\main.c.obj"
+},
+{
+  "directory": "C:/dev/workspace/c_samples/out",
+  "command": "\"C:\\dev\\apps\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx86\\x86\\cl.exe\"  /nologo -IC:\\dev\\workspace\\c_samples\\src\\text /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /Fosrc\\text\\CMakeFiles\\text.dir\\main.c.obj /Fdsrc\\text\\CMakeFiles\\text.dir\\ /FS -c C:\\dev\\workspace\\c_samples\\src\\text\\main.c",
+  "file": "C:\\dev\\workspace\\c_samples\\src\\text\\main.c",
+  "output": "src\\text\\CMakeFiles\\text.dir\\main.c.obj"
+},
+{
+  "directory": "C:/dev/workspace/c_samples/out",
+  "command": "\"C:\\dev\\apps\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx86\\x86\\cl.exe\"  /nologo -IC:\\dev\\workspace\\c_samples\\src\\linked_list -IC:\\dev\\workspace\\c_samples\\src\\common\\common.h -IC:\\dev\\workspace\\c_samples\\src\\memory_arena /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /Fosrc\\linked_list\\CMakeFiles\\linked_list.dir\\linked_list.c.obj /Fdsrc\\linked_list\\CMakeFiles\\linked_list.dir\\linked_list.pdb /FS -c C:\\dev\\workspace\\c_samples\\src\\linked_list\\linked_list.c",
+  "file": "C:\\dev\\workspace\\c_samples\\src\\linked_list\\linked_list.c",
+  "output": "src\\linked_list\\CMakeFiles\\linked_list.dir\\linked_list.c.obj"
+}
+]
