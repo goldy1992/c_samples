@@ -10,18 +10,7 @@ void test_queue()
 {
     printf("testing queues\n");
     fflush(stdout);
-    Queue queue = createQueue(sizeof(int), (size_t)10);
-    int i;
-    for (i = 1; i <= 5; i++)
-    {
-        pushQueueCopy(&i, sizeof(int), &queue);
-    }
-    for (i = 1; i <= 5; i++)
-    {
-        int popped = *(int *)popQueue(&queue);
-        printf("popped queue %d\n", popped);
-        fflush(stdout);
-    }
+   
 }
 
 void test_hashmap()

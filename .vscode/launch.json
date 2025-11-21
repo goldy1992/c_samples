@@ -84,7 +84,7 @@
             "name": "Test",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/Debug/kam_thai_unit_tests.exe",
+            "program": "${workspaceFolder}/bin/Debug/unit_tests.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}/bin/Debug",

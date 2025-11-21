@@ -23,8 +23,9 @@
 // }
 
 // // for simplicity all memory is allocated on the stack!
-// int main()
-// {
+int main()
+{
+}
 //     // Link to the Win32 API functions
 //     PlatformThreadAPI threadAPI;
 //     threadAPI.createPlatformThread = &win32CreatePlatformThread;

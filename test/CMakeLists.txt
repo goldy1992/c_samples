@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.22.1...3.31.7 )
 
 add_subdirectory(${UNITY_DIR} ${BUILD_DIR})
 set(EXECUTABLE_NAME "unit_tests")
-
+include(CTest)
 set(SOURCES)
 list( APPEND SOURCES
     main.c 

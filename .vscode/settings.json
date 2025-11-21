@@ -12,10 +12,12 @@
         "platform_thread.h": "c",
         "linked_list.h": "c",
         "assert.h": "c",
-        "test_queue.h": "c"
+        "test_queue.h": "c",
+        "intrin.h": "c"
     },
     "editor.suggest.insertMode": "insert",
     "[cpp]": {
         "editor.suggest.insertMode": "insert"
-    }
+    },
+    "C_Cpp.default.compilerPath": "cl.exe"
 }
