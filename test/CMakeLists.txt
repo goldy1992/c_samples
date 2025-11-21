@@ -12,7 +12,7 @@ list( APPEND SOURCES
 add_executable(${EXECUTABLE_NAME} ${SOURCES})
 
 target_include_directories( ${EXECUTABLE_NAME} PUBLIC 
-    Unity/src
+    ${UNITY_DIR}/src
     ${CMAKE_CURRENT_SOURCE_DIR}/include
     ${CMAKE_SOURCE_ROOT}/linked_list
     ${CMAKE_SOURCE_ROOT}/memory_arena
@@ -29,10 +29,9 @@ target_link_libraries(${EXECUTABLE_NAME}
 )
 
 # enable testing functionality
-enable_testing()
 
 # define tests
 add_test(
-  NAME unit_tests 
+  NAME unit_test_suite 
   COMMAND $<TARGET_FILE:${EXECUTABLE_NAME}>
 )

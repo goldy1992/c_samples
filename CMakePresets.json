@@ -11,30 +11,20 @@
             "description": "Use the Ninja build system to generate a compile_commands.json. This cannot be done with MSVC on Windows.",
             "generator": "Ninja",
             "environment": {
-                "CMAKE_BUILD_TYPE": "Debug"
+                "CMAKE_BUILD_TYPE": "Debug",
+                "BUILD_TESTING": "ON"
+
             },
             "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug"
-            }   
-
+                "CMAKE_BUILD_TYPE": "Debug",
+                "BUILD_TESTING": "ON"
+            },
+            "binaryDir": "bin"
         },
         {
             "name": "msvc",
             "description": "Use this preset on Windows with VSCode or Visual Studio; their LSPs work with MSVC directly.",
             "generator": "Visual Studio 17 2022"
-        },
-        {
-            "name": "test",
-            "description": "Default CMake settings that apply to all configurations",
-            "generator": "Visual Studio 17 2022",
-            "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug",
-                "BUILD_TESTING": "ON"
-            },
-            "environment": {
-                "CMAKE_BUILD_TYPE": "Debug",
-                "BUILD_TESTING": "ON"
-            }
         }
     ],
     "buildPresets": [
@@ -43,25 +33,15 @@
             "description": "Default build settings that apply to all configurations",
             "configurePreset": "default",
             "configuration": "Debug"
+
         }
- 
     ],
     "testPresets": [
         {
             "name": "test",
-            "description": "Test CMake settings that apply to all configurations",
-            "configuration": "Debug",
-            "configurePreset": "test",
-            "output": {
-                "outputOnFailure": true
-            },
-            "environment": {
-                "BUILD_TESTING": "ON"
-            },
-            "execution": {
-                "noTestsAction": "error",
-                "stopOnFailure": true
-            }
+            "description": "Run the unit tests",
+            "displayName": "test",
+            "configurePreset": "default"
         }
     ]
 }

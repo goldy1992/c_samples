@@ -14,7 +14,8 @@ void MyThreadFunction(void* params) {
     PlatformThreadAPI threadAPI = threadParams->threadAPI;
     printf("Thread started with message: %s\n", message);
     fflush(stdout);
-    for (int i = 0; i < 5; ++i) {
+    int i;
+    for (i = 0; i < 5; ++i) {
         printf("Thread %d says: %d\n", GetCurrentThreadId() ,i);
         fflush(stdout);
         threadAPI.sleep(500); // Simulate some work

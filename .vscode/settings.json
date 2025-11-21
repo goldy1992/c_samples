@@ -11,7 +11,8 @@
         "windows.h": "c",
         "platform_thread.h": "c",
         "linked_list.h": "c",
-        "assert.h": "c"
+        "assert.h": "c",
+        "test_queue.h": "c"
     },
     "editor.suggest.insertMode": "insert",
     "[cpp]": {
