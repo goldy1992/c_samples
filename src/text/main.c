@@ -3,7 +3,7 @@
 
 int main()
 {
-    const char* myStr = "fonts\\arial.ttf";
+    char* myStr = "fonts\\arial.ttf";
     unsigned int currentInt = 0;
     char* charPtr = myStr;
     while (*charPtr != '\0')

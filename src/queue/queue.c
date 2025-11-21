@@ -31,12 +31,12 @@ void* pushQueueGetRef(Queue* queue) {
 	else {
 		insertIdx = (queue->size++ + queue->headIdx) % queue->capacity;
 	}	
-	return queue->data + (insertIdx* queue->itemSize);
+	return ((char*)queue->data) + (insertIdx* queue->itemSize);
 }
 
 void* popQueue(Queue* queue) {
 	assert(queue->size > 0);
-	void* toReturn  = queue->data + (queue->itemSize * queue->headIdx);
+	void* toReturn  = ((char*)queue->data) + (queue->itemSize * queue->headIdx);
 	if (--queue->size == 0) {
 		queue->headIdx = -1;
 	}
