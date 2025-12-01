@@ -13,7 +13,10 @@
         "linked_list.h": "c",
         "assert.h": "c",
         "test_queue.h": "c",
-        "intrin.h": "c"
+        "intrin.h": "c",
+        "vector.h": "c",
+        "test_vector.h": "c",
+        "string.h": "c"
     },
     "editor.suggest.insertMode": "insert",
     "[cpp]": {

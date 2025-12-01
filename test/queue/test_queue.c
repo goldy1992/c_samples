@@ -3,6 +3,14 @@
 #include "test_queue.h"
 _Pragma("warning(disable: 4100)") // Disable warning for unused parameter 'item' in mock queue
 
+void setUp(void) {
+    // This is run before EACH test
+}
+
+void tearDown(void) {
+    // This is run after EACH test
+}
+
 void test_queue_creation(void) {
  Queue queue = createQueue(sizeof(int), (size_t)10);
     int i;
@@ -39,4 +47,11 @@ void test_enqueue_and_dequeue(void) {
 
     // For now, a placeholder test that passes
     TEST_ASSERT_TRUE(1);
+}
+
+int main() {
+    UNITY_BEGIN();
+    RUN_TEST(test_queue_creation);
+    RUN_TEST(test_enqueue_and_dequeue);
+    return UNITY_END();
 }

@@ -4,6 +4,7 @@
 #include "queue.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <assert.h>
 
 void test_queue()
@@ -57,10 +58,45 @@ void test_linked_list(Arena *arena)
     assert(result == kamT1);
 }
 
+#define MS_PRINTF(str, ...) printf(str, ##__VA_ARGS__); \
+fflush(stdout);
+
+
+typedef struct {
+    int x;
+    const char *y;
+    int* list;
+} MyStruct;
+
+MyStruct createMyStruct() {
+    MyStruct m;
+    m.x= 47;
+    m.y = "allocate me";
+    m.list = (int *) malloc(7 * sizeof(int));
+    int* listPtr = m.list;
+    size_t n = 0;
+    for (n; n < 7; n++)
+    {
+        *listPtr++ = n*7;
+    }
+    return m;
+}
+
 int main()
 {
+    MyStruct m = createMyStruct();
+
+    // make a copy of the struct
+    MyStruct* mCopy = (MyStruct*) malloc(sizeof(MyStruct));
+
+    memcpy_s(mCopy, sizeof(MyStruct), &m, sizeof(MyStruct));
+
+    int age = 30;
+    const char* name = "Mike";
+    MS_PRINTF("my name is %s, aged %d\n", name, age);
     printf("running app\n");
     fflush(stdout);
+    test_hashmap();
     test_queue();
     // Arena arena;
     // arena_init(&arena, 1024);
