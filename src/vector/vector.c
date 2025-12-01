@@ -3,6 +3,7 @@
 #include <assert.h>
 
 void vectorInit(Vector* vector, size_t itemSize, size_t itemCapacity, Arena* allocator) {
+    assert(itemCapacity > 0); // vector should have some default capacity greater than zero
     vector->data = arena_push(allocator, itemSize * itemCapacity);
     vector->itemCapacity= itemCapacity;
     vector->itemSize = itemSize;
@@ -18,8 +19,11 @@ void vectorAppend(Vector* vector, void* item, Arena* arena) {
        size_t oldItemCapacity = vector->itemCapacity;
        size_t oldByteCapacity = vector->byteCapacity;
 
-
-       vector->itemCapacity = oldItemCapacity * 2;
+        if (oldItemCapacity == 0) {
+            vector->itemCapacity = 1;
+        } else {
+            vector->itemCapacity = oldItemCapacity * 2;
+        }
        vector->byteCapacity = vector->itemCapacity * vector->itemSize;
        vector->data = arena_push(arena, vector->byteCapacity);
 
